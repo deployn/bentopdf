@@ -8,7 +8,9 @@ COPY . .
 # Build without type checking (vite build only)
 # Pass SIMPLE_MODE environment variable if provided
 ARG SIMPLE_MODE=false
+ARG VITE_BASE_URL=/
 ENV SIMPLE_MODE=$SIMPLE_MODE
+ENV VITE_BASE_URL=$VITE_BASE_URL
 RUN npm run build -- --mode production
 
 # Production stage
