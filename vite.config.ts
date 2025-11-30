@@ -3,6 +3,14 @@ import tailwindcss from '@tailwindcss/vite';
 import { nodePolyfills } from 'vite-plugin-node-polyfills';
 import { resolve } from 'path';
 
+const getBaseUrl = () => {
+  const baseUrl = process.env.VITE_BASE_URL || '/';
+  if (baseUrl === '/') return '/';
+  return baseUrl.startsWith('/')
+    ? (baseUrl.endsWith('/') ? baseUrl : `${baseUrl}/`)
+    : `/${baseUrl}/`;
+};
+
 export default defineConfig(({ mode }) => ({
   plugins: [
     tailwindcss(),
@@ -17,6 +25,7 @@ export default defineConfig(({ mode }) => ({
   ],
   define: {
     __SIMPLE_MODE__: JSON.stringify(process.env.SIMPLE_MODE === 'true'),
+    __BASE_URL__: JSON.stringify(getBaseUrl()),
   },
   resolve: {
     alias: {
