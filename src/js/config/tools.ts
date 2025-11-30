@@ -89,13 +89,13 @@ export const categories = [
       },
       {
         // id: 'bookmark-pdf',
-        href: '/src/pages/bookmark.html',
+        href: getToolHref('/src/pages/bookmark.html'),
         name: 'Edit Bookmarks',
         icon: 'bookmark',
         subtitle: 'Add, edit, import, delete and extract PDF bookmarks.',
       },
       {
-        href: '/src/pages/table-of-contents.html',
+        href: getToolHref('/src/pages/table-of-contents.html'),
         name: 'Table of Contents',
         icon: 'list',
         subtitle: 'Generate a table of contents page from PDF bookmarks.',
@@ -143,7 +143,7 @@ export const categories = [
         subtitle: 'Draw, type, or upload your signature.',
       },
       {
-        href: '/src/pages/add-stamps.html',
+        href: getToolHref('/src/pages/add-stamps.html'),
         name: 'Add Stamps',
         icon: 'stamp',
         subtitle: 'Add image stamps to your PDF using the annotation toolbar.',
@@ -167,7 +167,7 @@ export const categories = [
         subtitle: 'Fill in forms directly in the browser. Also supports XFA forms.',
       },
       {
-        href: '/src/pages/form-creator.html',
+        href: getToolHref('/src/pages/form-creator.html'),
         name: 'Create PDF Form',
         icon: 'file-input',
         subtitle: 'Create fillable PDF forms with drag-and-drop text fields.',
@@ -238,7 +238,7 @@ export const categories = [
         subtitle: 'Convert a plain text file into a PDF.',
       },
       {
-        href: '/src/pages/json-to-pdf.html',
+        href: getToolHref('src/pages/json-to-pdf.html'),
         name: 'JSON to PDF',
         icon: 'file-code',
         subtitle: 'Convert JSON files to PDF format.',
@@ -288,7 +288,7 @@ export const categories = [
         subtitle: 'Convert all colors to black and white.',
       },
       {
-        href: '/src/pages/pdf-to-json.html',
+        href: getToolHref('src/pages/pdf-to-json.html'),
         name: 'PDF to JSON',
         icon: 'file-code',
         subtitle: 'Convert PDF files to JSON format.',
