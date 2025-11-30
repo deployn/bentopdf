@@ -1,10 +1,15 @@
 // This file centralizes the definition of all available tools, organized by category.
+declare const __BASE_URL__: string;
+const getToolHref = (path: string): string => {
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${__BASE_URL__}${cleanPath}`;
+};
 export const categories = [
   {
     name: 'Popular Tools',
     tools: [
       {
-        href: '/src/pages/pdf-multi-tool.html',
+        href: getToolHref('src/pages/pdf-multi-tool.html'),
         name: 'PDF Multi Tool',
         icon: 'pencil-ruler',
         subtitle: 'Merge, Split, Organize, Delete, Rotate, Add Blank Pages, Extract and Duplicate in an unified interface.',
